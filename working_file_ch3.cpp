@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-
+#include <bitset>
 
 int add(int x, int y) {
   // Adds integers x and y together.
@@ -79,8 +79,41 @@ void learn_cpp_3_5(){
       std::cout << "d1 < d2" << "\n";
 }
 
+void hexadecimal(){
+    int x = 0x80; // 0x before the number means this is hexadecimal
+    std::cout << x;
+}
+
+void learn_cpp_3_8(){
+  unsigned char option_viewed = 0x01;
+  unsigned char option_edited = 0x02;
+  unsigned char option_favorited = 0x04;
+  unsigned char option_shared = 0x08;
+  unsigned char option_deleted = 0x80;
+
+  unsigned char myArticleFlags = 0;
+  std::cout << myArticleFlags << "\n";
+
+  myArticleFlags |= option_viewed;
+  myArticleFlags |= option_deleted;
+  myArticleFlags |= option_favorited;
+
+  std::bitset<8> x(myArticleFlags);
+  std::cout << x << "\n";
+
+  std::bitset<8> y(~option_favorited);
+  std::cout << y << "\n";
+
+  myArticleFlags &= ~option_favorited;
+  std::bitset<8> z(myArticleFlags);
+  std::cout << z << "\n";
+
+  std::cout << "Deleted:" << ((myArticleFlags & option_deleted) != 0) << "\n";
+
+}
 
 int main() {
-  learn_cpp_3_5();
+  learn_cpp_3_8();
+
   return 0;
 }
