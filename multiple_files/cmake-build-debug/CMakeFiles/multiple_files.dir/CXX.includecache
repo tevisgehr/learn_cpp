@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/tgehr/learncpp/learn_cpp/multiple_files/add.h
+
+/Users/tgehr/learncpp/learn_cpp/multiple_files/main.cpp
+iostream
+-
+add.h
+/Users/tgehr/learncpp/learn_cpp/multiple_files/add.h
+iostream
+-
+
+/Users/tgehr/learncpp/learn_cpp/multiple_files/second_file.cpp
+iostream
+-
+

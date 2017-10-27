@@ -12,6 +12,7 @@ int multiply(int x,int y) {
 int main() {
     int x = 2;
     int y = 5;
-    std::cout << multiply(add(2,1),add(x,y));
+    std::cout << multiply(add(2,1),add(x,y)) <<std::endl;
+    std::cout << (2 == 2);
     return 0;
 }
